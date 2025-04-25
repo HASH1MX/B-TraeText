@@ -42,6 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const wordElement = document.createElement('div');
                 wordElement.classList.add('brat-text');
                 wordElement.textContent = word.toLowerCase();
+                
+                // Dynamically adjust font size based on word length
+                // For longer words, make the font size smaller
+                if (word.length > 15) {
+                    wordElement.style.fontSize = '2rem';
+                } else if (word.length > 10) {
+                    wordElement.style.fontSize = '2.5rem';
+                } else if (word.length > 6) {
+                    wordElement.style.fontSize = '3rem';
+                }
+                
                 textContainer.appendChild(wordElement);
             }
         });
