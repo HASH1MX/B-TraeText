@@ -39,9 +39,8 @@ body {
     line-height: 1.2;
     letter-spacing: 1px;
     margin: 5px 0;
-    font-size: 8.5rem;
     filter: blur(2.2px);
-    max-width: 90%;
+    max-width: 95%;
     word-break: break-word;
     white-space: normal;
     overflow: hidden;
@@ -112,12 +111,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .brat-text {
-        font-size: 6rem;
-        max-width: 95%;
-    }
-    
-    #userInput {
+    .input-container {
         width: 90%;
     }
 } 
