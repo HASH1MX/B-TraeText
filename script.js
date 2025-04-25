@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Dynamically adjust font size based on word length
                 // For longer words, make the font size smaller
                 if (word.length > 15) {
-                    wordElement.style.fontSize = '2rem';
+                    wordElement.style.fontSize = '3.2rem';
                 } else if (word.length > 10) {
-                    wordElement.style.fontSize = '2.5rem';
+                    wordElement.style.fontSize = '4rem';
                 } else if (word.length > 6) {
-                    wordElement.style.fontSize = '3rem';
+                    wordElement.style.fontSize = '4.8rem';
                 }
                 
                 textContainer.appendChild(wordElement);
