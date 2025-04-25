@@ -34,11 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
         textContainer.style.justifyContent = 'center';
         textContainer.style.width = '100%';
         
-        // Display the complete text instead of just the first word
-        const wordElement = document.createElement('div');
-        wordElement.classList.add('brat-text');
-        wordElement.textContent = text.toLowerCase();
-        textContainer.appendChild(wordElement);
+        // Split text into words and display each word on its own line
+        const words = text.split(/\s+/);
+        
+        words.forEach(word => {
+            if (word) {
+                const wordElement = document.createElement('div');
+                wordElement.classList.add('brat-text');
+                wordElement.textContent = word.toLowerCase();
+                textContainer.appendChild(wordElement);
+            }
+        });
         
         outputContainer.appendChild(textContainer);
     }
