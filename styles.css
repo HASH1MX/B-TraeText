@@ -39,8 +39,8 @@ body {
     line-height: 1.2;
     letter-spacing: 1px;
     margin: 5px 0;
-    font-size: 5.5rem;
-    filter: blur(1.5px);
+    font-size: 7.5rem;
+    filter: blur(2px);
     max-width: 90%;
     word-break: break-word;
     white-space: normal;
@@ -113,7 +113,7 @@ body {
 
 @media (max-width: 768px) {
     .brat-text {
-        font-size: 4.2rem;
+        font-size: 5.5rem;
         max-width: 95%;
     }
     
