@@ -1,0 +1,15 @@
+{
+  "name": "brat-text-generator",
+  "version": "1.0.0",
+  "description": "A real-time brat style text generator",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["brat", "text", "generator"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+} 
