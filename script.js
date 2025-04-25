@@ -1,37 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
     const userInput = document.getElementById('userInput');
     const outputContainer = document.getElementById('output');
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const body = document.body;
 
     // Set focus on the input field when the page loads
     userInput.focus();
 
-    // No longer generating default text on load
-
     // Generate brat text as the user types
     userInput.addEventListener('input', () => {
         const text = userInput.value.trim();
-        
-        if (text === '') {
-            // Clear output if input is empty
-            outputContainer.innerHTML = '';
-            return;
-        }
-        
-        // Generate the brat text layout
         generateBratText(text);
     });
 
+    // Theme switching logic
+    themeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const themeClass = button.classList[1]; // Get the specific theme class
+            applyTheme(themeClass);
+        });
+    });
+
+    // Function to apply the selected theme
+    function applyTheme(themeClass) {
+        // Remove previous theme classes from body
+        body.className = ''; 
+        
+        // Apply new theme class to body if one exists
+        if (themeClass) {
+            body.classList.add(themeClass);
+        }
+    }
+    
     // Function to generate brat-style text layout
     function generateBratText(text) {
         outputContainer.innerHTML = ''; // Clear previous content
         
+        if (text === '') return; // Don't generate text if input is empty
+
         // Create a container for the text layout
         const textContainer = document.createElement('div');
-        textContainer.style.display = 'flex';
-        textContainer.style.flexDirection = 'column';
-        textContainer.style.alignItems = 'center';
-        textContainer.style.justifyContent = 'center';
-        textContainer.style.width = '100%';
+        textContainer.classList.add('text-content-container'); // Use a class for text container
         
         // Split text into words
         const words = text.split(/\s+/);
@@ -79,6 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        outputContainer.appendChild(textContainer);
+        outputContainer.appendChild(textContainer); // Add text container after overlay
     }
+    
+    // Initialize with default (no theme)
+    applyTheme(''); // Start with no theme applied
 }); 
