@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textContainer.style.justifyContent = 'center';
         textContainer.style.width = '100%';
         
-        // Split text into words and display each word on its own line
+        // Split text into words
         const words = text.split(/\s+/);
         
         // Determine the base font size based on total text length
@@ -52,26 +52,31 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (words.length > 5) {
             baseFontSize = '6.5rem';
         } else {
-            baseFontSize = '8.5rem';
+            baseFontSize = '7.2rem';
+        }
+        
+        // Group words into lines of roughly 3 words each
+        const wordsPerLine = 3;
+        const lines = [];
+        
+        for (let i = 0; i < words.length; i += wordsPerLine) {
+            const lineWords = words.slice(i, i + wordsPerLine);
+            lines.push(lineWords);
         }
         
         // Apply the font size to the text container
         textContainer.style.fontSize = baseFontSize;
         
-        words.forEach(word => {
-            if (word) {
-                const wordElement = document.createElement('div');
-                wordElement.classList.add('brat-text');
-                wordElement.textContent = word.toLowerCase();
+        // Create each line with properly spaced words
+        lines.forEach(lineWords => {
+            if (lineWords.length > 0) {
+                const lineContainer = document.createElement('div');
+                lineContainer.classList.add('brat-line');
                 
-                // Individual word adjustment based on length
-                if (word.length > 15) {
-                    wordElement.style.fontSize = '0.8em';
-                } else if (word.length > 10) {
-                    wordElement.style.fontSize = '0.9em';
-                }
+                // Join words with double spaces
+                lineContainer.textContent = lineWords.join('  ').toLowerCase();
                 
-                textContainer.appendChild(wordElement);
+                textContainer.appendChild(lineContainer);
             }
         });
         
