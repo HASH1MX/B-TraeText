@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set focus on the input field when the page loads
     userInput.focus();
 
-    // Generate text on load with the default value
-    generateBratText('okay');
+    // No longer generating default text on load
 
     // Generate brat text as the user types
     userInput.addEventListener('input', () => {
