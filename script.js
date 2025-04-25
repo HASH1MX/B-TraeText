@@ -34,15 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
         textContainer.style.justifyContent = 'center';
         textContainer.style.width = '100%';
         
-        // Display only the first word - like in the image
-        const firstWord = text.split(/\s+/)[0];
-        
-        if (firstWord) {
-            const wordElement = document.createElement('div');
-            wordElement.classList.add('brat-text');
-            wordElement.textContent = firstWord.toLowerCase();
-            textContainer.appendChild(wordElement);
-        }
+        // Display the complete text instead of just the first word
+        const wordElement = document.createElement('div');
+        wordElement.classList.add('brat-text');
+        wordElement.textContent = text.toLowerCase();
+        textContainer.appendChild(wordElement);
         
         outputContainer.appendChild(textContainer);
     }
