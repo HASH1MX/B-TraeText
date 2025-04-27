@@ -22,4 +22,8 @@ A simple web app that generates text in the style of "brat" albums in real-time 
 
 ## License
 
-This project is open source and available for personal use. 
+NO LICENSE THIS IS MY PROJECT DONT TAKE IT!!!
+
+
+
+
