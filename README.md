@@ -14,7 +14,7 @@ A simple web app that generates text in the style of "brat" albums in real-time 
 2. Open `index.html` in your web browser
 3. Start typing in the input box and see the text generate in real-time in the brat style
 
-## Technologies Used :
+## Technologies Used :-
 
 - HTML
 - CSS
