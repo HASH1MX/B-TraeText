@@ -8,7 +8,7 @@ A simple web app that generates text in the style of "brat" albums in real-time 
 - Minimalist design inspired by the "brat" aesthetic
 - Responsive layout that works on both desktop and mobile devices
 
-## How to Use
+## How to Use :
 
 1. Clone or download this repository
 2. Open `index.html` in your web browser
