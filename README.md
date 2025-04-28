@@ -2,7 +2,7 @@
 
 A simple web app that generates text in the style of "brat" albums in real-time as you type.
 
-## Features
+## Features :
 
 - Real-time text generation as you type
 - Minimalist design inspired by the "brat" aesthetic
