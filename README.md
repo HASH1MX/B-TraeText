@@ -22,7 +22,7 @@ A simple web app that generates text in the style of "brat" albums in real-time 
 
 ## License :-
 
-NO LICENSE THIS IS MY PROJECT DONT TAKE IT!!!
+NO LICENSE THIS IS MY PROJECT DONT TAKE IT
 
 
 
