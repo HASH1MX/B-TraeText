@@ -1,4 +1,4 @@
-# BRAT Text Generator  
+# BRAT Text Generator  : THIS WAS VERY FUN TO BUILD <3 
 
 A simple web app that generates text in the style of "brat" albums in real-time as you type.
 
